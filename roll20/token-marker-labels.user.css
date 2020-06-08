@@ -1,0 +1,39 @@
+/* Prevent the icons from taking up extra space, allow space for the label text */
+#radial-menu .markermenu.open .statusicon {
+    font-size: 0;
+    margin-bottom: 6px;
+}
+/* Undo the default dead "X" styling */
+#radial-menu .markermenu .markercolor.dead {
+    font-weight: normal;
+    height: 24px;
+    margin-left: 0;
+    padding: 0;
+    top: 0 !important;
+    width: 24px;
+}
+/* Show the icon titles as labels */
+#radial-menu .markermenu.open .statusicon::after {
+    color: black;
+    content: attr(title);
+    display: inline-block;
+    font-size: 9px;
+    line-height: 1em;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    top: 24px;
+    white-space: nowrap;
+    width: 24px;
+}
+/* Recreate the dead "X" without disrupting the layout */
+#radial-menu .markermenu .markercolor.dead::before {
+    content: "X";
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    top: 2px;
+    width: 100%;
+}
