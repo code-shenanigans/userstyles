@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name        Roll20 - Token marker labels
+@namespace   https://github.com/code-shenanigans/userstyles/
+@version     1.0.0
+@license     GPL-3.0-or-later
+@description Displays Roll20 token marker icon titles as labels.
+@homepageURL https://github.com/code-shenanigans/userstyles/
+@supportURL  https://github.com/code-shenanigans/userstyles/issues
+==/UserStyle== */
+
+@-moz-document url("https://app.roll20.net/editor/") {
 /* Prevent the icons from taking up extra space, allow space for the label text */
 #radial-menu .markermenu.open .statusicon {
     font-size: 0;
@@ -36,4 +47,5 @@
     text-align: center;
     top: 2px;
     width: 100%;
+}
 }
