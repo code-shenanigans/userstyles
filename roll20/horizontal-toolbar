@@ -1,0 +1,74 @@
+/* ==UserStyle==
+@name        Roll20 - Horizontal toolbar
+@namespace   https://github.com/code-shenanigans/userstyles/
+@version     1.0.0
+@license     GPL-3.0-or-later
+@description Displays the main Roll20 toolbar horizontally.
+@homepageURL https://github.com/code-shenanigans/userstyles/
+@supportURL  https://github.com/code-shenanigans/userstyles/issues
+==/UserStyle== */
+
+@-moz-document url("https://app.roll20.net/editor/") {
+#floatingtoolbar,
+#secondary-toolbar {
+    left: 10px;
+}
+#floatingtoolbar {
+    top: 10px;
+    width: auto;
+}
+#floatingtoolbar > ul {
+    font-size: 0;
+}
+#floatingtoolbar > ul > li {
+    border-bottom: 0 none;
+    border-left: 1px solid #999999;
+    display: inline-block;
+    height: 25px;
+    vertical-align: top;
+    width: 30px;
+}
+#select {
+    padding: 4px 3px 2px 3px !important;
+}
+#floatingtoolbar div.submenu {
+    left: -11px;
+    padding-top: 0;
+    top: 31px;
+}
+#select div.submenu {
+    left: -12px;
+}
+#zoompanel div.submenu {
+    top: 26px;
+}
+#floatingtoolbar div.submenu ul {
+    border-top-left-radius: 0;
+    padding: 0;
+}
+#floatingtoolbar div.submenu ul.selZoom {
+    border-top-right-radius: 0;
+}
+#floatingtoolbar div.submenu ul li {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+#editinglayer li.gm_slider_box {
+    padding-bottom: 9px;
+}
+#secondary-toolbar {
+    border-bottom-right-radius: 8px;
+    top: 42px;
+}
+#secondary-toolbar .mode.path.rect.polygon,
+#secondary-toolbar .mode.text {
+    height: 36px;
+    padding-left: 2px;
+}
+#secondary-toolbar .mode.path.rect.polygon li,
+#secondary-toolbar .mode.text li {
+    height: 100%;
+    padding-right: 5px;
+    padding-top: 4px;
+}
+}
