@@ -1,0 +1,90 @@
+/* ==UserStyle==
+@name        Roll20 - Static token menu
+@namespace   https://github.com/code-shenanigans/userstyles/
+@version     1.0.0
+@license     GPL-3.0-or-later
+@description Fixes the position of the (otherwise radial) token menu to be in the top-left. This is intended to be used with "Roll20 - Horizontal toolbar" - https://raw.githubusercontent.com/code-shenanigans/userstyles/master/roll20/horizontal-toolbar.user.css - and is based on: https://app.roll20.net/forum/permalink/8734330/
+@homepageURL https://github.com/code-shenanigans/userstyles/
+@supportURL  https://github.com/code-shenanigans/userstyles/issues
+==/UserStyle== */
+
+@-moz-document url("https://app.roll20.net/editor/") {
+#radial-menu {
+    --color-yellow: 255,204,0;
+    display: block !important;
+    left: 10px !important;
+    position: fixed;
+    top: 92px !important;
+}
+#radial-menu .button {
+    box-shadow: 0 0 5px #888994;
+}
+#radial-menu .button.button-1,
+#radial-menu .button.button-2,
+#radial-menu .button.button-3,
+#radial-menu .button.button-4,
+#radial-menu .button.button-5 {
+    left: 0;
+}
+#radial-menu .button.button-1,
+#radial-menu .button.button-2 {
+    background-color: white;
+}
+#radial-menu .button.button-1 {
+    border-radius: 0 0 25px 25px;
+    padding-top: 4px;
+    top: 180px;
+}
+#radial-menu .button.button-2 {
+    border-radius: 25px 25px 0 0;
+    top: 141px;
+}
+#radial-menu .button.button-3 {
+    top: 0;
+}
+#radial-menu .button.button-4 {
+    top: 45px;
+}
+#radial-menu .button.button-5 {
+    top: 90px;
+}
+#radial-menu .markermenu.open {
+    border-radius: 25px;
+    height: 342px;
+    top: -114px;
+    width: 270px;
+}
+#radial-menu .markermenu .markercolor,
+#radial-menu .markermenu .markercolor.active,
+#radial-menu .markermenu .markericon,
+#radial-menu .markermenu .markericon.active {
+    border: 0 none transparent;
+}
+#radial-menu .markermenu .markercolor.active,
+#radial-menu .markermenu .markericon.active {
+    outline: 2px dashed rgb(var(--color-yellow));
+    outline-offset: -2px;
+}
+#radial-menu .markermenu .markercolor.active {
+    border-radius: 0;
+}
+#radial-menu .markermenu .markercolor.dead {
+    top: -2px;
+}
+#radial-menu .markermenu .markercolor.dead,
+#radial-menu .markermenu .markericon.active {
+    background-color: rgba(var(--color-yellow),0.4);
+}
+#radial-menu .popupvalue {
+    height: 30px;
+    left: 45px;
+    position: absolute;
+    top: 5px;
+    width: 55px;
+    z-index: 1005;
+}
+#radial-menu .popupvalue input {
+    font-size: 16px;
+    width: 100%;
+}
+}
