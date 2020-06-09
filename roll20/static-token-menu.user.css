@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Roll20 - Static token menu
 @namespace   https://github.com/code-shenanigans/userstyles/
-@version     2.0.0
+@version     2.0.1
 @license     GPL-3.0-or-later
 @description Fixes the position of the (otherwise radial) token menu to be in the top-left. This is intended to be used with "Roll20 - Horizontal toolbar" - https://raw.githubusercontent.com/code-shenanigans/userstyles/master/roll20/horizontal-toolbar.user.css - and is based on: https://app.roll20.net/forum/permalink/8734330/
 @homepageURL https://github.com/code-shenanigans/userstyles/
@@ -71,7 +71,7 @@
 #radial-menu .markermenu .markercolor.dead {
     top: -2px;
 }
-#radial-menu .markermenu .markercolor.dead,
+#radial-menu .markermenu .markercolor.dead.active,
 #radial-menu .markermenu .markericon.active {
     background-color: rgba(var(--color-yellow),0.4);
 }
