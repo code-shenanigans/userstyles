@@ -28,6 +28,10 @@
     vertical-align: top;
     width: 30px;
 }
+/* Override for existing override of the "Hide Areas" button class display */
+#floatingtoolbar > ul > li.hide {
+    display: inline-block !important;
+}
 #select {
     padding: 4px 3px 2px 3px !important;
 }
