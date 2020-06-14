@@ -1,0 +1,21 @@
+/* ==UserStyle==
+@name        Roll20 - Show upload filesizes
+@namespace   https://github.com/code-shenanigans/userstyles/
+@version     1.0.0
+@license     GPL-3.0-or-later
+@description Exposes the sizes for the files in recent uploads (from existing HTML attributes).
+@homepageURL https://github.com/code-shenanigans/userstyles/
+@supportURL  https://github.com/code-shenanigans/userstyles/issues
+==/UserStyle== */
+
+@-moz-document url("https://app.roll20.net/editor/") {
+#recentuploads li::after {
+    background-color: white;
+    content: attr(data-filesize);
+    display: inline-block;
+    font-size: 0.8em;
+    padding-left: 3px;
+    position: absolute;
+    right: 0;
+}
+}
