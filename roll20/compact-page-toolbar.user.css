@@ -1,0 +1,154 @@
+/* ==UserStyle==
+@name        Roll20 - Compact page toolbar
+@namespace   https://github.com/code-shenanigans/userstyles/
+@version     1.0.0
+@license     GPL-3.0-or-later
+@description Reduces the space taken up by the page toolbar and reskins most elements of it.
+@homepageURL https://github.com/code-shenanigans/userstyles/
+@supportURL  https://github.com/code-shenanigans/userstyles/issues
+==/UserStyle== */
+
+@-moz-document url("https://app.roll20.net/editor/") {
+#page-toolbar {
+    height: 40vh;
+    left: initial;
+    max-width: 97%;
+    right: 1.5%;
+    width: auto;
+}
+#page-toolbar .container {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+#page-toolbar .pages {
+    height: 100%;
+}
+#page-toolbar .pages .availablepage {
+    height: 100%;
+    margin-right: 0;
+    margin-top: 0;
+    width: 65px;
+}
+#page-toolbar .pages .availablepage[data-pageid="archive"],
+#page-toolbar .pages .availablepage[data-pageid="create"] {
+    background-color: #333333;
+}
+#page-toolbar .pages .availablepage[data-pageid="archive"]:hover,
+#page-toolbar .pages .availablepage[data-pageid="create"]:hover {
+    background-color: rgba(51,51,51,0.9);
+}
+#page-toolbar .pages .availablepage.chooseablepage:nth-child(2n) {
+    background-color: #919191;
+}
+#page-toolbar .pages .availablepage img.pagethumb {
+    left: 50%;
+    margin-top: 0;
+    max-height: 60px;
+    max-width: 60px;
+    position: absolute;
+    top: 5px;
+    transform: translate(-50%);
+}
+#page-toolbar .pages .availablepage[data-pageid="archive"] img.pagethumb,
+#page-toolbar .pages .availablepage[data-pageid="create"] img.pagethumb {
+    display: none;
+}
+#page-toolbar .pages .availablepage.chooseablepage:hover {
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: 0 0 3px white;
+}
+#page-toolbar .availablepage.chooseablepage.ui-droppable.ui-sortable-helper {
+    background-color: rgb(255,0,0,0.5);
+    box-shadow: 0 0 2px white;
+}
+#page-toolbar .pages .availablepage.chooseablepage.activepage {
+    background-color: rgb(47,135,209,0.5);
+}
+#page-toolbar .pages .availablepage.chooseablepage.activepage:hover {
+    background-color: rgb(47,135,209,0.4);
+    box-shadow: 0 0 2px white;
+}
+#page-toolbar .pages .availablepage.activepage img.pagethumb {
+    border: 0 none transparent;
+}
+#page-toolbar .pages div.availablepage:hover img.pagethumb {
+    box-shadow: 0 0 5px #222222;
+}
+#page-toolbar .pages .availablepage span {
+    bottom: 0;
+    box-sizing: border-box;
+    font-size: 0.85em;
+    max-height: 100%;
+    overflow-wrap: anywhere;
+    padding: 70px 2px 0;
+    position: relative;
+    white-space: normal;
+}
+#page-toolbar .pages .availablepage[data-pageid="archive"] span,
+#page-toolbar .pages .availablepage[data-pageid="create"] span {
+    padding-top: 0;
+}
+#page-toolbar .pages .availablepage[data-pageid="archive"] span::before,
+#page-toolbar .pages .availablepage[data-pageid="create"] span::before {
+    display: block;
+    font-family: "Pictos";
+    font-size: 60px;
+    line-height: 60px;
+    padding: 5px 0;
+}
+#page-toolbar .pages .availablepage[data-pageid="archive"] span::before {
+    content: "o";
+}
+#page-toolbar .pages .availablepage[data-pageid="create"] span::before {
+    content: "+";
+}
+#page-toolbar .pages .availablepage span input {
+    box-sizing: border-box;
+    font-size: 0.8em;
+    padding: 1px;
+    top: 0;
+    width: 100%;
+}
+#page-toolbar .pages .availablepage .duplicate,
+#page-toolbar .pages .availablepage .settings {
+    background-color: #333333;
+    bottom: 0;
+    font-size: 14px;
+    padding: 0;
+    top: initial;
+    width: 50%;
+}
+#page-toolbar .pages .availablepage .duplicate:hover,
+#page-toolbar .pages .availablepage .settings:hover {
+    background-color: black;
+}
+#page-toolbar .pages .availablepage .duplicate {
+    right: 0;
+}
+#page-toolbar .pages .availablepage .settings {
+    border-radius: 0;
+    left: 0;
+}
+#page-toolbar .playerbookmark {
+    bottom: 10px;
+    box-sizing: border-box;
+    left: 0;
+    top: initial;
+    transform: rotate(90deg);
+    width: 100%;
+    z-index: 100;
+}
+#page-toolbar .playerbookmark.ui-draggable.ui-droppable.dropping {
+    background-color: rgba(255,204,0,0.5);
+    border: 0 none transparent;
+    left: 0;
+}
+#page-toolbar .playerspecificbookmark {
+    bottom: 60px;
+    left: 0;
+    top: initial !important;
+}
+}
